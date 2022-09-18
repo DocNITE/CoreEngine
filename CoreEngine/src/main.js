@@ -17,6 +17,20 @@ import {changePageTitle} from "../src/utils.js"
  */
 function main()
 {
+    mainUpdate();
+    mainRender();
+    
+    // Repeat func
+    requestAnimationFrame(main);
+}
+
+
+/**
+ * Main game render method.
+ * Rendered all quered state's
+ */
+function mainRender()
+{
     // Viewport aligment
     // TODO: But now only left_up, and, maybe, center
     if (_engine.SCREEN.ALIGMENT == CANVAS_LEFT_UP)
@@ -40,13 +54,20 @@ function main()
 
     _context.clearRect(0, 0, _canvas.width, _canvas.height)
 
+    // TEST
     _context.fillStyle = 'white';
     _context.font = '20px Serilif Sans';
     _context.fillText('Я мужик ---', 100, 200);
-    
-    // Repeat func
-    requestAnimationFrame(main);
 }
+
+
+/**
+ * Main game logic update.
+ */
+ function mainUpdate()
+ {
+
+ }
 
 
 /**
@@ -71,9 +92,6 @@ function init()
     SetContext(_canvas.getContext('2d'));
 
     //_canvas.style.cursor = "none";
-
-    let newMusic = new Audio("DATA/MUSIC/OST_STORY.MP3")
-    newMusic.play();
 
     requestAnimationFrame(main);
 
