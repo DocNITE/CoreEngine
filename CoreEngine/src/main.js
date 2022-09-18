@@ -3,7 +3,7 @@ import {
     DEBUG, 
     MAJOR, MINOR, PATCH, 
     _canvas, _context, 
-    SetCanvas, SetContext, 
+    setCanvas, setContext, 
     CANVAS_LEFT_UP, CANVAS_CENTER
 } from "../src/define.js"
 
@@ -88,8 +88,8 @@ function init()
         );
 
 	// Initialise canvas & context
-    SetCanvas(document.getElementById('canvas'));
-    SetContext(_canvas.getContext('2d'));
+    setCanvas(document.getElementById('canvas'));
+    setContext(_canvas.getContext('2d'));
 
     //_canvas.style.cursor = "none";
 

@@ -1,6 +1,6 @@
 {
     "ENGINE_NAME": "CoreEngine",
-    "ENGINE_VER": [0, 0, 0],
+    "ENGINE_VER": [0, 0, 1],
 
     "DEBUG": true,
     

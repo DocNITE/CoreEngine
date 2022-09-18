@@ -25,7 +25,7 @@ export let _context;
  * Change main screen object
  * @param {HTMLCanvasElement} canvas 
  */
-export function SetCanvas(canvas)
+export function setCanvas(canvas)
 {
     _canvas = canvas;
 }
@@ -34,7 +34,7 @@ export function SetCanvas(canvas)
  * Change main context
  * @param {CanvasRenderingContext2D} context 
  */
- export function SetContext(context)
+ export function setContext(context)
  {
     _context = context;
  }
