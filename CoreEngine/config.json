@@ -1,0 +1,15 @@
+{
+    "ENGINE_NAME": "CoreEngine",
+    "ENGINE_VER": [0, 0, 0],
+
+    "DEBUG": true,
+    
+    "SCREEN": 
+    {
+        "WIDTH": 800,
+        "HEIGHT": 600,
+        "FULLSCREEN": true,
+
+        "ALIGMENT" : 0
+    }
+}
