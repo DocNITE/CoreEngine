@@ -3,13 +3,28 @@
  */
 export class eCRndDevice {
     // Private
-    canvas;
-    ctx
+    scrWidth;   // Screen width in ascii symbols
+    scrHeight;  // Screen height in ascii symbols
+    buffer;     // Screen buffer
     // Public
-    //..
+    canvas;     // Normal HTML canvas element
+    ctx;        // Canvas 2d context
+
+    /**
+     * Init class
+     * @param {*} canvas 
+     * @param {*} context 
+     */
     constructor(canvas, context) {
         this.canvas = canvas;
         this.ctx = context;
+    }
+
+    /**
+     * Update screen
+     */
+    draw() {
+
     }
 
     /**

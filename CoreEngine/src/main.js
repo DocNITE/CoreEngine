@@ -47,15 +47,22 @@ function resize() {
     let scrW = 0; //11
     let scrH = 0; //16
 
-    for (let y = 0; (y*11+11) < innerHeight; y++) {
-        for (let x = 0; (x*16+16) < innerWidth; x++) {
+    for (let y = 0; (y*16+16) < innerHeight; y++) {
+        for (let x = 0; (x*11+11) < innerWidth; x++) {
             scrW = x;
         }
         scrH = y;
     }
+
+    RndDevice.scrHeight = scrH+2;
+    RndDevice.scrWidth = scrW-4;
 }
 addEventListener("resize", resize);
-
+function getRandomInt(min, max) {
+    min = Math.ceil(min);
+    max = Math.floor(max);
+    return Math.floor(Math.random() * (max - min) + min); // The maximum is exclusive and the minimum is inclusive
+  }
 /**
  * Main game render method.
  * Rendered all quered state's
@@ -68,17 +75,17 @@ function mainRender() {
     //_context.font = '20px Serilif Sans';
     //_context.fillText('#FFFFFFTest message', 100, 200);
     // Testing screen draw
+    let sText = "";
+    let sArr = [];
 
-    RndDevice.fillRichText(
-        [
-            {text: "ah", fillStyle: "green", font: "16px Kitchen Sink"}, 
-            {text: "m:aDn", fillStyle: "red", font: "16px Kitchen Sink"},
-            {text: "ṗy", fillStyle: "white", font: "16px Kitchen Sink"},
-            {text: "ou", fillStyle: "cyan", font: "16px Kitchen Sink"},
-            {text: " a", fillStyle: "white", font: "16px Kitchen Sink"}
-        ], 
-        0, 15
-    )
+    for (let a = 1; a < RndDevice.scrHeight; a++) {
+        for (let i = 0; i < RndDevice.scrWidth; i++) {
+            sArr.push({text: "▓", fillStyle: `rgba(${getRandomInt(0, 255)}, ${getRandomInt(0, 255)}, ${getRandomInt(0, 255)}, 255)`, font: "16px Kitchen Sink"});
+        }
+        RndDevice.fillRichText(sArr, 0, 16*a)
+        sArr = [];
+    }
+    //console.log(RndDevice.scrWidth)
 }
 
 
