@@ -2,7 +2,7 @@ import {
     DEBUG, 
     MAJOR, MINOR, PATCH, 
     _canvas, _context, 
-    SetCanvas, SetContext, 
+    setCanvas, setContext, 
     CANVAS_LEFT_UP, CANVAS_CENTER
 } from "../src/define.js"
 

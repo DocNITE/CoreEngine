@@ -3,6 +3,7 @@ canvas {
 }
 
 @font-face{
-	font-family: "Serilif Sans";
-	src:url("DATA/FONT/SerilifFontOPPO.ttf");
+	font-family: "Kitchen Sink";
+	box-sizing: border-box;
+	src:url("DATA/FONT/Kitchen Sink.ttf");
 }
